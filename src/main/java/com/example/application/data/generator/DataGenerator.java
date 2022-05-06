@@ -60,7 +60,6 @@ public class DataGenerator {
             }).collect(Collectors.toList());
 
             contactRepository.saveAll(contacts);
-
             logger.info("Generated demo data");
         };
     }
