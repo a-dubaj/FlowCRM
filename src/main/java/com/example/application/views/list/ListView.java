@@ -33,6 +33,7 @@ public class ListView extends VerticalLayout {
         content.setFlexGrow(2, grid);
         content.setFlexGrow(1, form);
         content.addClassName("content");
+        content.setSizeFull();
         return content;
     }
 
