@@ -35,7 +35,6 @@ public class ListView extends VerticalLayout {
         return toolbar;
     }
 
-
     private void configureGrid() {
         grid.addClassName("contact-gird");
         grid.setSizeFull();
