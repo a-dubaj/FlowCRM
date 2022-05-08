@@ -53,5 +53,4 @@ public class CrmService {
     public List<Status> findAllStatuses() {
         return statusRepository.findAll();
     }
-
 }
