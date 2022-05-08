@@ -15,6 +15,7 @@ import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
+import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
 
 import java.util.List;
@@ -53,13 +54,28 @@ public class ContactForm extends FormLayout {
         delete.addThemeVariants(ButtonVariant.LUMO_ERROR);
         close.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
 
+        save.addClickListener(event -> ValidateAndSave());
+        delete.addClickListener(event -> fireEvent(new DeleteEvent(this, contact)));
+        close.addClickListener(event -> fireEvent(new CloseEvent(this)));
+
         save.addClickShortcut(Key.ENTER);
         close.addClickShortcut(Key.ESCAPE);
+
         return new HorizontalLayout(save, delete, close);
+    }
+
+    private void ValidateAndSave() {
+        try {
+            binder.writeBean(contact);
+            fireEvent(new SaveEvent(this, contact));
+        } catch (ValidationException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static abstract class ContactFormEvent extends ComponentEvent<ContactForm> {
         private Contact contact;
+
         protected ContactFormEvent(ContactForm source, Contact contact) {
             super(source, false);
             this.contact = contact;
