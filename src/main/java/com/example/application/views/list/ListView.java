@@ -29,6 +29,13 @@ public class ListView extends VerticalLayout {
         configureForm();
         add(getToolbar(), getContent());
         updateList();
+        closeEditor();
+    }
+
+    private void closeEditor() {
+        form.setContact(null);
+        form.setVisible(false);
+        removeClassName("editing");
     }
 
     private void updateList() {
