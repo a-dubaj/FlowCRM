@@ -10,7 +10,6 @@ import com.vaadin.flow.router.HighlightConditions;
 import com.vaadin.flow.router.RouterLink;
 
 public class MainLayout extends AppLayout {
-
     public MainLayout() {
         createHeader();
         createDrawer();
@@ -24,7 +23,6 @@ public class MainLayout extends AppLayout {
         header.expand(logo);
         header.setWidthFull();
         header.addClassNames("py-0", "px-m");
-
         addToNavbar(header);
     }
 

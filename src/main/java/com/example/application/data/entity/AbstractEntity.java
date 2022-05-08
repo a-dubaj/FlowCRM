@@ -1,4 +1,5 @@
 package com.example.application.data.entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
