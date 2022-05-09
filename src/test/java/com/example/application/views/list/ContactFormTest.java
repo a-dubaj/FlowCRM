@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class ContactFormTest {
     private List<Company> companies;
@@ -55,6 +56,31 @@ public class ContactFormTest {
         Assert.assertEquals("marc@usher.com", form.email.getValue());
         Assert.assertEquals(company2, form.company.getValue());
         Assert.assertEquals(status1, form.status.getValue());
+    }
+
+    @Test
+    public void saveEventHasCorrectValues() {
+        ContactForm form = new ContactForm(companies, statuses);
+        Contact contact = new Contact();
+        form.setContact(contact);
+
+        form.firstName.setValue("John");
+        form.lastName.setValue("Doe");
+        form.email.setValue("john@doe.com");
+        form.company.setValue(company1);
+        form.status.setValue(status2);
+
+        AtomicReference<Contact> savedContact = new AtomicReference<>(null);
+        form.addListener(ContactForm.SaveEvent.class, e -> savedContact.set(e.getContact()));
+
+        form.save.click();
+        Contact saved = savedContact.get();
+
+        Assert.assertEquals("John", saved.getFirstName());
+        Assert.assertEquals("Doe", saved.getLastName());
+        Assert.assertEquals("john@doe.com", saved.getEmail());
+        Assert.assertEquals(company1, saved.getCompany());
+        Assert.assertEquals(status2, saved.getStatus());
     }
 
 }
