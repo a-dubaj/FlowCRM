@@ -2,9 +2,18 @@
 
 [![Java CI with Maven](https://github.com/a-dubaj/FlowCRM/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/a-dubaj/FlowCRM/actions/workflows/maven.yml)
 [![Slack Notification](https://github.com/a-dubaj/FlowCRM/actions/workflows/slack-notify.yml/badge.svg?branch=master)](https://github.com/a-dubaj/FlowCRM/actions/workflows/slack-notify.yml)
+[![Tests](https://github.com/a-dubaj/FlowCRM/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/a-dubaj/FlowCRM/actions/workflows/tests.yml)
 
 This project can be used as a starting point to create your own Vaadin application with Spring Boot.
 It contains all the necessary configuration and some placeholder files to get you started.
+
+![image](./assets/1.png)
+
+![image](./assets/2.png)
+
+![image](./assets/3.png)
+
+![image](./assets/4.png)
 
 ## Running the application
 
