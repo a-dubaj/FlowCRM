@@ -5,7 +5,7 @@
 [![Tests](https://github.com/a-dubaj/FlowCRM/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/a-dubaj/FlowCRM/actions/workflows/tests.yml)
 
 This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+
 -----
 ![image](./assets/1.png)
 
