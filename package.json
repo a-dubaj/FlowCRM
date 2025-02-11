@@ -121,7 +121,7 @@
   },
   "devDependencies": {
     "chokidar": "^3.5.0",
-    "compression-webpack-plugin": "4.0.1",
+    "compression-webpack-plugin": "11.1.0",
     "css-loader": "5.2.7",
     "esbuild-loader": "2.15.1",
     "extra-watch-webpack-plugin": "1.0.3",
@@ -139,7 +139,7 @@
     "webpack-merge": "4.2.2",
     "workbox-core": "6.5.0",
     "workbox-precaching": "6.5.0",
-    "workbox-webpack-plugin": "6.5.0"
+    "workbox-webpack-plugin": "7.3.0"
   },
   "overrides": {
     "@vaadin/accordion": "$@vaadin/accordion",
@@ -379,7 +379,7 @@
     },
     "devDependencies": {
       "chokidar": "^3.5.0",
-      "compression-webpack-plugin": "4.0.1",
+      "compression-webpack-plugin": "11.1.0",
       "css-loader": "5.2.7",
       "esbuild-loader": "2.15.1",
       "extra-watch-webpack-plugin": "1.0.3",
@@ -397,7 +397,7 @@
       "webpack-merge": "4.2.2",
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0",
-      "workbox-webpack-plugin": "6.5.0"
+      "workbox-webpack-plugin": "7.3.0"
     },
     "hash": "17b0ef070c22faffba8f8497c5326037e3d1e25619539613895dd4034ed50603"
   }
